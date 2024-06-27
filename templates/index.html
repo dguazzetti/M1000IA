@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <title>Modelo De Predicción | Desperdicions de alimentos</title>
+</head>
+
+<body>
+    <!-- hero -->
+    <section id="home">
+        <div class="content">
+            <!-- header -->
+            <header>
+                <div class="content-header">
+                    <img class="img" src="../static/img/logo.jpg" alt="logo">
+                    <nav id="nav" class="">
+                        <ul id="links">
+                            <li><a href="#home" onclick="select(this)">Inicio</a></li>
+                            <li><a href="#contact"  onclick="select(this)">Contacto</a></li>
+                            <li><a href="#"  onclick="select(this)">Iniciar sesión</a></li>
+                            <li><a href="#"  onclick="select(this)">Registrarse</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </div>
+    </section>
+
+    <!-- inicio -->
+    <section id="inicio">
+        <div class="hero">
+            <div class="intro">
+                <h1>Predicción para la<br> Reducción de Pérdidas<br>y Desperdicio de Alimentos</h1>
+                <h2>Modelo Predictivo de Machine Learning</h2>
+                <p>Selecciona las diferentes variables para tu predicción</p>
+                <div class="row g-3 mb-3 me-2">
+                    <div class="col">
+                        <label class="form-label ps-2" for="year">Año:</label>
+                        <select class="form-control" name="year" id="year">
+                            <option selected disabled>Seleccionar</option>
+                            <option value="2016">2016</option>
+                            <option value="2018">2018</option>
+                            <option value="2020">2020</option>
+                            <option value="2022">2022</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label class="form-label ps-2" for="area_continente">Área:</label>
+                        <select class="form-control" name="area_continente" id="area_continente">
+                            <option selected disabled>Seleccionar</option>
+                            <option value="Sub-Saharan Africa">África Subsahariana</option>
+                            <option value="Northern Africa">Norte de África</option>
+                            <option value="Western Africa">Oeste de África</option>
+                            <option value="South-Eastern Asia">Sudeste de Asia</option>
+                            <option value="Central Asia">Centro de Asia</option>
+                            <option value="Southern Asia">Sur de Asia</option>
+                            <option value="Eastern Asia">Este de Asia</option>
+                            <option value="Western Asia">Oeste de Asia</option>
+                            <option value="Northern America">América del Norte</option>
+                            <option value="Latin America and the Caribbean">América Latina y Caribe</option>
+                            <option value="Western Europe">Oeste de Europa</option>
+                            <option value="Eastern Europe">Este de Europa</option>
+                            <option value="Northern Europe">Norte de Europa</option>
+                            <option value="Southern Europe">Sur de Europa</option>
+                            <option value="Australia and New Zealand">Australia y Nueva Zelanda</option>
+                            <option value="Melanesia">Melanesia</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row g-3 mb-3 me-2">
+                    <div class="col">
+                        <label class="form-label ps-2" for="commodity">Producto:</label>
+                        <select class="form-control" name="commodity" id="commodity">
+                            <option selected disabled>Seleccionar</option>
+                            <option value="Maize">Maíz</option>
+                            <option value="Rice">Arroz</option>
+                            <option value="Millet">Mijo</option>
+                            <option value="Sorghum">Sorgo</option>
+                            <option value="Wheat">Trigo</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label class="form-label ps-2" for="activity">Actividad:</label>
+                        <select class="form-control" class="select-item" name="activity" id="activity">
+                            <option selected disabled>Seleccionar</option>
+                            <option value="Harvest">Cosecha</option>
+                            <option value="Winninimg">Clasificación</option>
+                            <option value="Drying">Secado</option>
+                            <option value="Storage">Almacenamiento</option>
+                            <option value="Transport">Transporte</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3 g-3">
+                    <div class="col">
+                        <label class="form-label ps-2" for="food_supply_stage">Etapa de suministro:</label>
+                        <select class="form-control" name="food_supply_stage" id="food_supply_stage">
+                            <option selected disabled>Seleccionar</option>
+                            <option value="Farm">Granja</option>
+                            <option value="Harvest">Cosecha</option>
+                            <option value="Post_Harvest">Post-Cosecha</option>
+                            <option value="Storage">Almacenamiento</option>
+                            <option value="Processing">Procesamiento</option>
+                            <option value="Transport">Transporte</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                
+                    </div>
+                </div>
+                
+                <div class="d-flex justify-content-center">
+                    <button id="enviarPrediccion" class="button">Predecir</button>
+                </div>
+                
+                </div>
+            <div class="tierra">
+                <img src="../static/img/tierra.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div id="output" class="alert mt-4"></div>
+    </section>
+
+    <!-- conciencia -->
+    <section id="conciencia">
+        <div class="conciencia-container">
+            <ul class="conciencia-list">
+                <li class="conciencia-item conciencia-frase">Cada día se desperdician toneladas de alimentos en el mundo</li>
+                <li class="conciencia-item conciencia-imagen"><img src="../static/img/conciencia1.jpg" alt=""></li>
+                <li class="conciencia-item conciencia-frase">Y miles de niños mueren de hambre</li>
+                <li class="conciencia-item conciencia-imagen"><img src="../static/img/conciencia2.jpg" alt=""></li>
+                <li class="conciencia-item conciencia-frase">Si tomamos conciencia y nos involucramos podemos cambiar esta realidad</li>
+            </ul>
+        </div>
+    </section>
+    <!-- mapa de calor -->
+    <section id="mapa">
+        <div class="hero">
+            <div class="cta">
+                 <img src="../static/img/cta1.jpg" alt="">
+            </div>
+            
+            <div class="intro">
+                <h2>Conoce el mapa de calor con el desperdicio estimado a nivel mundial </h2>
+            </div>
+        </div >
+        <div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe title="MAPA MUNDO ACUARELA" frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/667cf83100cc360013f797f6" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+        </div>
+    </section>
+    <!-- contacto -->
+    <section id="contact">
+        <h3 class="header-section">Contáctanos</h3>
+        <div class="container-form">
+            <form action="">
+                <div class="sr-contact">
+                <div class="half row ">
+                    <input type="text"  id= "name" placeholder="Nombre Completo" autocomplete="off" class="input-half">
+                    <input type="email" id= "email" placeholder="Email" autocomplete="off" class="input-half">
+                </div>
+                <div class="row">
+                    <input type="text" id="subject" placeholder="Asunto" autocomplete="off" class="input-full">
+                </div>
+                <div class="row">
+                    <textarea name="" id="message" cols="10" rows="5" placeholder="Quieres conocer más sobre nuestro proyecto? Envíanos comentarios, inquietudes, etc" autocomplete= "off" class="input-full"></textarea>
+                </div>
+                <button type="submit" class="button" >Enviar mensaje</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <p>Tecnólogas con Experiencia en IA <br> Grupo-10 Integrantes: <br>
+            Melisa Garcia Martino, Daiana Guazzetti, Pamela Heredia,
+           Laura Moyano,<br> Yerika Marley Basto Rozo, Leidy Mora Vaca, Debora Acuña</p>
+           <br>
+           <hr>
+           <br>
+        <p>Copyright © - Todos los derechos reservados - 2024</p>
+    </footer>
+
+    <!-- Script para Boostrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../static/js/script.js"></script>
+    
+    <!-- Script de métodos REQUEST -->
+    <script>
+        // Método POST para enviar los datos
+        document.getElementById('enviarPrediccion').addEventListener('click', async () => {
+            const dateSelect = document.querySelector('#year');
+            const year = dateSelect.value;
+            const areaSelect = document.querySelector('#area_continente');
+            const area = areaSelect.value;
+            const productoSelect = document.querySelector('#commodity');
+            const producto = productoSelect.value;
+            const actividadSelect = document.querySelector('#activity');
+            const actividad = actividadSelect.value;
+            const etapaSelect = document.querySelector('#food_supply_stage');
+            const etapa = etapaSelect.value;
+
+            const datos = {
+                year: year,
+                area: area,
+                producto: producto,
+                actividad: actividad,
+                etapa: etapa
+            };
+
+            const response = await fetch('http://127.0.0.1:8000/datos', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(datos)
+            });
+
+            const data = await response.json();
+            let prediccion = data.prediccion;
+            document.getElementById('output').innerText = data.prediccion;
+            if(prediccion == 'muy alta') {
+                document.getElementById('output').classList.add('alert-danger'); 
+            }else if(prediccion == 'alta') {
+                document.getElementById('output').classList.add('alert-warning');
+            }else if(prediccion == 'baja') {
+                document.getElementById('output').classList.add('alert-success');
+            }else if(prediccion == 'muy baja') {
+                document.getElementById('output').classList.add('alert-primary');
+            }
+         
+        });
+
+        // Método FETCH para metodo GET
+        document.getElementById('getButton').addEventListener('click', async () => {
+            const response = await fetch('http://127.0.0.1:8000/datos/3');
+            const data = await response.json();
+            document.getElementById('output').classList.remove('d-none');
+            document.getElementById('output').classList.remove('alert-warning');
+            document.getElementById('output').classList.add('alert-success');
+            document.getElementById('output').innerText = JSON.stringify(data);
+        });
+    </script>
+
+</body>
+
+</html>

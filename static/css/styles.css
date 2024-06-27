@@ -1,0 +1,274 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        /* home */
+        
+        #home .content header {
+            width: 100%;
+            z-index: 100;
+            top: 0;
+            margin-bottom: 8px;
+            margin-top: 8px;
+        }
+
+        #home .content-header .img {
+            width: 140px;
+            margin-left: 20px;
+        }
+        
+        #home .content header .content-header {
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 10px;
+        }
+        
+        #home .content header .content-header nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        #home .content header .content-header nav ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            margin: 18px 15px;
+            font-weight: 500;
+        }
+        
+        #home .content header .content-header nav ul li a:hover {
+            color:#3a7bd5;
+        }
+
+        /*inicio*/
+
+        #inicio .hero {
+            background-image: linear-gradient(to bottom, #d0f4ff, #dcf5ff, #e7f7ff, #f1f8ff, #f9fbff, #f7f9fe, #f6f7fe, #f5f5fd, #ebeefc, #e0e8fa, #d2e2f8, #c3ddf6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #inicio .hero .intro {
+            margin-left: 75px;
+        }
+
+        #inicio .hero .intro h1 {
+            font-weight:900;
+            font-size: 36px;
+            padding-bottom: 10px;
+            padding-top: 40px;
+            padding-left: 0px;
+        }
+
+        #inicio .hero .intro h2 {
+            margin-bottom: 28px;
+            font-size: large;
+        }
+
+        #inicio .hero .intro .select {
+            margin-bottom: 20px;
+        }
+
+        #inicio .hero .intro .select .select-item {
+            margin-right: 25px;
+            font-size: medium;
+        }
+
+        #inicio .hero .tierra{
+            margin: auto;
+        }
+
+        #inicio .hero .tierra img {
+            height: 500px;
+        }
+
+        /* conciencia */
+        
+        #conciencia {
+            background-color:#3a7bd5; 
+            padding: 20px; 
+            margin-top: 60px;
+            margin-bottom: 60px;
+            max-width: 90%;
+        }
+        
+        .conciencia-container {
+            overflow-x: auto; 
+        }
+        
+        .conciencia-list {
+            list-style-type: none;
+            display: flex; 
+            overflow: auto; 
+            padding: 0;
+            font-size: large;
+            font-weight: 500;
+            color: white;
+        }
+        
+        .conciencia-item {
+            flex: 1; 
+            text-align: center;
+            margin: 30px 30px; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-around; 
+            align-items: center; 
+        }
+        
+        .conciencia-imagen img {
+            max-width: 100%; 
+        }
+        
+        /* mapa de calor */
+        
+        #mapa .hero {
+            background-image: linear-gradient(to bottom, #d0f4ff, #dcf5ff, #e7f7ff, #f1f8ff, #f9fbff, #f7f9fe, #f6f7fe, #f5f5fd, #ebeefc, #e0e8fa, #d2e2f8, #c3ddf6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 60px;
+        }
+
+        #mapa .hero .intro {
+            margin-left: 75px;
+        }
+
+        #mapa .hero .intro h2 {
+            font-weight:600;
+            font-size: 32px;
+            padding: 24px;
+        }
+
+        #mapa .hero .cta{
+            margin: auto;
+        }
+
+        #mapa .hero .cta img {
+            height: 300px;
+            margin-left: 150px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* contacto */
+       
+        #contact {
+            display: grid;
+            padding: 20px 15px;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            background-image: linear-gradient(to bottom, #d0f4ff, #dcf5ff, #e7f7ff, #f1f8ff, #f9fbff, #f7f9fe, #f6f7fe, #f5f5fd, #ebeefc, #e0e8fa, #d2e2f8, #c3ddf6);
+
+        }
+        
+        #contact .container-form {
+            margin: auto;
+            width: 600px;
+        }
+        
+        #contact .container-form .row {
+            margin-bottom: 15px;
+        }
+        
+        #contact .container-form .half {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        #contact .container-form input,
+        #contact .container-form textarea {
+            width: 500px;
+            padding: 18px 40px;
+            border-radius: 10px;
+            border: none;
+            border: 3px solid #3a7bd5;
+            font-size: larger;
+            background-color: whitesmoke;
+        }
+
+        #contact .container-form .half input {
+            width: 48%;
+        }
+        
+        #contact .container-form .input-full {
+            width: 100%;
+        }
+
+        #contact .container-form .button {
+            color: whitesmoke;
+            padding: 10px 30px;
+            border-radius: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            margin-left: auto;
+            margin-right: auto;
+            letter-spacing: 1px;
+            margin-bottom: 60px;
+        }
+        
+         .header-section {
+            font-size: 26px;
+            text-align: center;
+            justify-content: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            padding-top: 40px;
+            padding-bottom: 30px;
+        }
+      
+         .button {
+            background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5  51%, #00d2ff  100%);
+            margin: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: whitesmoke;
+            display: block;
+            padding: 10px 30px;
+            border-radius: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 60px;
+          }
+
+          .button:hover {
+            background-position: right center; 
+            text-decoration: none;
+          }
+
+          a {
+            text-decoration: none;
+            color: black;
+          }
+         
+        /* footer */
+        
+        footer {
+            background-color:#3a7bd5;
+            color:whitesmoke;
+            text-align: center;
+            padding: 30px 0;
+            font-size:larger;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+        
+       
